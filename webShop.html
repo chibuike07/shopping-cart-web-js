@@ -5,30 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>web shop</title>
-    <!--script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script-->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <!--script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script-->
-    <!----script src="members.js"></script-->
     <link rel="stylesheet" href="./css-files/web-shop.css" />
   </head>
   <body>
-    <header>
-      <img src=".jpeg" alt="" />
-      <div class="view-p">
-        <div class="menu-wrapper">
-          <div class="menu"></div>
-          <div class="menu"></div>
-          <div class="menu"></div>
-          <div class="comm">
-            <b>menu</b>
-          </div>
-        </div>
-      </div>
-    </header>
-  o'
-    <br />
     <!----img src="https://res.cloudinary.com/hobbyluv07/image/upload/v1568429160/arthouse-wallpaper-694800-64_600_p0rfjg.jpg" alt="wallpaper" height="100" width="100%"-->
     <div class="overall-container">
       <div class="links">
@@ -36,19 +16,19 @@
           <img
             src="https://res.cloudinary.com/hobbyluv07/image/upload/v1568425126/logo_eeviwg.jpg"
             alt="logo image"
-            style="width:70px;height: 70px; border-radius: 30px;"
+            style="width: 70px; height: 70px; border-radius: 30px;"
             id="img"
           />
         </div>
-        <br />
+
         <div id="profile">
-          <strong id="un"></strong><br />
+          <strong id="un"></strong>
           <em id="em"></em>
         </div>
         <div class="upgrade">
           <a href="#">upgrade</a>
         </div>
-        <ul>
+        <ul class="list">
           <li id="dash"><a id="lik">dash_board</a></li>
           <li id="media"><a href="#">media</a></li>
           <li id="mem"><a href="#">members</a></li>
@@ -57,7 +37,7 @@
           <li><a href="#">setup</a></li>
         </ul>
       </div>
-      <br />
+
       <div id="container">
         <div class="detail">
           <h3>User name</h3>
@@ -65,35 +45,43 @@
         </div>
         <br />
         <div class="add">
-          <img
-            src="https://res.cloudinary.com/hobbyluv07/image/upload/v1568427574/cropped-faviANONDITA-HEALTHCARE-LOGO_daumdi.jpg"
-            alt="product image"
-            width="30px"
-          />
-          <a href="#">add-product</a>
-          <input type="search" placeholder="search" id="inp" value="" /><button
-            onclick="items(this)"
-          >
-            search
-          </button>
+          <div class="add_product">
+            <img
+              src="https://res.cloudinary.com/hobbyluv07/image/upload/v1568427574/cropped-faviANONDITA-HEALTHCARE-LOGO_daumdi.jpg"
+              alt="product image"
+              width="30px"
+            />
+            <a href="#">add-product</a>
+          </div>
+          <div>
+            <input type="search" placeholder="search" id="inp" value="" />
+            <button onclick="items(this)" class="btn_search">
+              search
+            </button>
+          </div>
 
-          <span id="day"></span>
+          <span id="day" class="day"></span>
 
           <button onclick="generatePassword(this)">generate password</button>
         </div>
 
-        <div id="dash-b">
-          <!-- <h1>Dash board</h1> -->
-          <!-- <div class="dash-board"> -->
-            <div class=" media">
-              <picture id="image"></picture>
-            </div>
-            <div
-              style="text-align: left; background-color: grey; width:100%; box-sizing: border-box; position: relative;"
-            >
-              <h1 style="text-align: center">recent items</h1>
-            </div>
+        <div id="dash-b" class="dash_b">
+          <div class="media">
+            <picture id="image"></picture>
           </div>
+          <div
+            style="
+              text-align: left;
+              background-color: rgb(0, 111, 185);
+              width: 100%;
+              box-sizing: border-box;
+              position: relative;
+              color: #fff;
+            "
+          >
+            <h1 style="text-align: center;">recent items</h1>
+          </div>
+        </div>
         <!-- </div> -->
         <div class="product-container" id="product-container">
           <div class="items-dp">
@@ -110,8 +98,9 @@
           </div>
         </div>
       </div>
+
       <div class="display">
-        <b id="sales"></b>
+        <b id="sales" class="sales"></b>
         <b id="not_found"></b>
       </div>
 
@@ -119,30 +108,7 @@
         <b id="productInfo"></b>
       </div>
     </div>
-
     <!-- <script src="./js/catalog.js"></script> -->
     <script src="./js/web_shop.js"></script>
-
-    <script>
-      let personalDetails = decodeURIComponent(window.location.search); //get sent data
-      personalDetails = personalDetails.substring(1);
-      const Details = profile => {
-        //function for sent data
-        console.log(profile);
-        var text = document.getElementById("text");
-        var user = document.getElementById("un");
-        var email = document.getElementById("em");
-        var img = document.getElementById("img");
-        var a = document.getElementById("lik");
-        a.setAttribute("href", "webShop.html?" + profile);
-        let splitV = profile.split(/\s+/g); //split the sent data
-        text.innerText = splitV[0];
-        user.innerText = splitV[0];
-        email.innerText = splitV[1];
-        img.src = splitV[2];
-        console.log(splitV[2]);
-      };
-      Details(personalDetails);
-    </script>
   </body>
 </html>
