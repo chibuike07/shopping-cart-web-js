@@ -5,7 +5,7 @@ const members = [];
   email: "princewillchime43@gmail.com",
   uniquepass: "a",
   img: "https://chibuike07.000webhostapp.com/shopping_blog/bgFoto.jpg",
-  phone: "234" + 08169543479
+  phone: "234" + 8169543479,
 }),
   (members["jardon"] = {
     surname: "uzor",
@@ -14,7 +14,7 @@ const members = [];
     uniquepass: "b",
     img:
       "https://res.cloudinary.com/hobbyluv07/image/upload/v1568425126/logo_eeviwg.jpg",
-    phone: "234" + 07065754331
+    phone: "234" + 7065754331,
   }),
   (members["rockboy"] = {
     surname: "anumake",
@@ -22,7 +22,7 @@ const members = [];
     email: "david@gmail.com",
     uniquepass: "c",
     img: "https://chibuike07.000webhostapp.com/shopping_blog/logo.jpg",
-    phone: "234" + 08102345678
+    phone: "234" + 8102345678,
   });
 
 var foundKey;
@@ -31,13 +31,11 @@ function member() {
   var form2 = document.getElementById("form2");
   let loopedPro;
   loopedPro = Object.keys(members);
-  //console.log(loopedPro)
   div = document.getElementById("members");
   for (var i = 0; i < loopedPro.length; i++) {
     foundKey = loopedPro[i];
-    console.log(foundKey);
     if (foundKey === user_name) {
-      form2.style.display = "block";
+      form2.style.display = "flex";
       document.getElementById("form1").style.display = "none";
 
       //else{console.log()};
@@ -73,22 +71,22 @@ function values() {
     form2.style.display = "none";
     let text = document.getElementById("text");
     let allValues = user_name + " \n " + foundEmail + " \n " + imgSource.src;
-    console.log(imgSource.src);
-    console.log(allValues);
+    ulElement = document.createElement("ul");
     liElement = document.createElement("li");
     aElement = document.createElement("a");
     aElement.setAttribute("href", "webShop.html?" + allValues);
     aElement.setAttribute("id", "aElement");
     aElement.innerText = "Welcome to shopping_cart_blog" + allValues;
     liElement.appendChild(aElement);
-    text.appendChild(liElement);
+    ulElement.style.listStyle = "none";
+    ulElement.appendChild(liElement);
+    text.appendChild(ulElement);
     alert(
       "you have been successfully verified and can click the link below to get to the dash board"
     );
     text.style.textAlign = "center";
-    aElement.style.color = "red";
+    aElement.style.color = "#fff";
     aElement.style.textDecoration = "none";
-    console.log(text);
     document.querySelector("form").reset();
   } else {
     return alert("please fill the forms correctly");

@@ -1,117 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>login page</title>
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <!--script src="https://chibuike07.000webhostapp.com/shopping_blog/members.js"></script-->
     <!--script src="https://chibuike07.000webhostapp.com/shopping_blog/web_shop.js"></script-->
-    
-    <style>
-    body{
-        background-color: darkblue;
-        position: relative;
-    }
-    #form1{
-        margin-top: 340px;
-        text-align: center; 
-        margin-right: 20px;
-        box-sizing: border-box;
-            
-            
-}
-    #form1 #username{
-        width:250px;
-        border-top-left-radius:30px;
-        height:53px;
-        border-style: none;
-        
-}
-    #username[type = 'text']{
-        padding-left:5px;
-        font-size: large;
-}
-    button{
-        background-color:black;
-        color: white;
-        width: 40px;
-        height: 53px;
-        text-align: center;
-}
-    #form2{
-        display: none;
-        margin: 190px;
-        text-align: center;
-        box-sizing: border-box;
-        
-    }
-    #form2  > input[type='text']{
-        min-width:50%;
-        text-align: center;
-        font-size:large;
-        height: 30px;
-        transform: translate('-50%, -70%')
 
-    }
-    #form2  > input[type='password']{
-        min-width:50%;
-        text-align: center;
-        height: 30px;
-        font-size:large;
-        transform: translate('-50%, -70%')
+    <link rel="stylesheet" href="/css-files/login.css" />
+  </head>
+  <body>
+    <div class="form_wrapper">
+      <form
+        action="javascript:;"
+        onsubmit="member(this)"
+        id="form1"
+        class="form1"
+      >
+        <input type="text" id="username" placeholder="User name" class="inp1" />
+        <button class="btn1">go</button>
+      </form>
 
-    }
-    #form2  > input[type='email']{
-        min-width:50%;
-        text-align: center;
-        height: 30px;
-        font-size:large;
-        transform: translate('-50%, -70%')
-    }
-    #form2  > input[type='submit']{
-        min-width:25%;
-        text-align: center;
-        height: 30px;
-        font-size:large;
-        transform: translate('-50%, -70%')
+      <form
+        action="javascript:;"
+        onsubmit="values(this)"
+        id="form2"
+        class="form2"
+      >
+        <input
+          type="text"
+          id="fn"
+          placeholder="surname name"
+          value=""
+          required
+        />
 
-    }
-    b{
-        font-size: 1.6em;
-        font-family: cursive;
-    }
+        <input type="text" id="o" placeholder="other names" required />
 
-    @media screen and (max-width:100%){
-        body{
-            min-width: 100px;
-            width: 100%;
+        <input type="email" id="e" placeholder="email" required />
 
-        }
+        <input type="password" id="up" placeholder="unquie pass" required />
 
-    }
+        <input type="submit" id="btn" placeholder="submit" required />
+      </form>
+      <div id="text" class="dashboardlink"></div>
+    </div>
 
-    </style>
-</head>
-<body>
-    <form action="javascript:;" onsubmit="values(this)" id="form2">
-      <b>First name:</b><br> <input type="text" id="fn" placeholder="surname name" value="" required><br><br>
-          <b>Other names:</b><br> <input type="text" id="o" placeholder="other names" required><br><br>
-          <b>Email:</b><br> <input type="email" id="e" placeholder="email" required><br><br>
-           <b>Unquie id:</b><br> <input type="password" id="up" placeholder="unquie" required><br><br>
-           <b>Submit:</b><br> <input type="submit" id="btn" placeholder="submit" required><br><br>
-        </form>
-        <form action="javascript:;" onsubmit="member(this)" id='form1'>
-               <b>User name:</b><br><input type="text" id="username" placeholder="User name">
-                <button>-></button>
-            </form>
-            <div id="text"></div>
-            
-            <script src="./js/members.js"></script>
-            <script src="./js/web_shop.js"></script>
-        </body>
-        </html>
+    <script src="./js/members.js"></script>
+    <script src="./js/web_shop.js"></script>
+  </body>
+</html>
