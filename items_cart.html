@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>items</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <!--script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script-->
+</head>
+<body>
+    <div id="contentInfo">
+<div>
+    <img src="#" id="img" style="width: 150px;"></b>
+</div>
+
+<div style="color: blue; background-color:#ccc; width: 150px">
+    <b id="name" style="float: left; margin-right: 10px; padding-left: 20px"></b><b id="amount" style="text-align: justify"></b>
+</div>
+</div>
+
+    <script>
+      //code to retrive the sent data 
+    let extractedSalesItem = decodeURIComponent(window.location.search);
+        extractedSalesItem = extractedSalesItem.substring(1);
+       // extractedSalesItem = extractedSalesItem.split('=')[1];
+        //creating a function for the sent data
+        const loadedItem = (sales) => {
+        console.log(sales)
+        //var imgs = new Image()
+        let splitFoundValues = sales.split(/\s+/g)//ssperate the datas
+        console.log(splitFoundValues)
+        let imageItem = document.getElementById('img');//getting the src for the sent img
+        for(i = 0; i < splitFoundValues.length; i++){//loop through the data
+             console.log()   
+                document.getElementById('name').innerText = (splitFoundValues[0] + ' \n ')//assig value to specified id
+                document.getElementById('amount').innerText = (splitFoundValues[1] + ' \n ')//assig value to specified id
+              imageItem.src = (splitFoundValues[2])//assig value to specified id
+              console.log(imageItem.src)
+            }
+        }
+        loadedItem(extractedSalesItem) 
+
+        
+    </script>
+</body>
+</html>

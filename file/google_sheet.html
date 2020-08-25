@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!--link rel="stylesheet" href="style.css"-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="formData.js"></script>
+</head>
+
+<body>
+  <div align="center">
+    <h1>google form submission</h1>
+    <form action="javascript:;">
+      <input type="email" name="Email adress" id="email" placeholder="Email adress">
+      <input type="text" name="First name" id="fnam" placeholder="First name">
+      <input type="text" name="Last name" id="lnam" placeholder="Last name">
+      <input type="password" name="Password" id="pwd" placeholder="Password">
+      <input type="password" name="Repeat password" id="rpwd" placeholder="Repeat password">
+      <input type="number" name="Number" id="number" placeholder="Phone number"><br><br>
+      
+    </form>
+
+
+       
+
+        <div id="loader"></div>
+
+        <p id="re"></p>
+
+        <input type="button" onClick="insert_value()" value="Insert"></input>
+        <input type="button" onclick="read_value()" value="Read" />
+        <input type="button" onclick="update_value()" value="Update" />
+        <input type="button" onclick="delete_value()" value="Delete" />
+        <br>
+        <a href="https://docs.google.com/spreadsheets/d/1UUBGKGvm4b9LOhqbdh0UDG6vYz9Phr1DqGyg8DvCiUc/edit?usp=sharing" target="_blank">Ir a la Hoja en Drive</a>
+        <br>
+        <a href="https://script.google.com/d/15dk-xpcCU0WYkRv9BExnRRmPjFcl6MvIPhEozoHZ6mHZ_MPfIjYKfzZj/edit?usp=sharing" target="_blank">Ir al Codigo Apps Script</a>
+        <div id="showData"></div>
+  </div>
+</body>
+<div align="center">
+  <p>TixTeck 2017 | Creative Commons</p>
+</div>
+<html>

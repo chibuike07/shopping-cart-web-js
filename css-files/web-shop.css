@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  background-color: #1f6650;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+header img {
+  width: 150px;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.links a:hover {
+  background: #ccc;
+  color: #000;
+}
+.overall-container {
+  background: #eafbea, url('cart-cari.jpeg');
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  /* display: none; */
+  background: #ea5e5e;
+  opacity: 0.9;
+  width: 20%;
+  text-align: center;
+  line-height: 2;
+  border: 2px solid yellow;
+  box-sizing: border-box;
+}
+.topArea {
+  margin: 1.3em 1.3em 0px 1.3em;
+}
+#profile {
+  color: white;
+  position: absolute;
+  top: 20.3em;
+  line-height: 1.7em;
+}
+#profile #em {
+  margin-left: 0.5em;
+}
+.upgrade {
+  margin-top: 2.3em;
+  background: rgb(6, 6, 94);
+}
+#container {
+  
+  border: red 2px solid;
+  padding: 20px;
+}
+#container .detail {
+  margin: 3% 3% 3% 0%;
+  line-height: 1.5;
+}
+#container .add {
+  /* line-height: 10; */
+  word-spacing: 10px;
+}
+#container .add input[type="search"] {
+  height: 5vh;
+  width: 20vw;
+  text-align: center;
+  font-size: 0.2in;
+  font-weight: lighter;
+  border-radius: 1.3em;
+  outline: none;
+}
+#container .add > button:nth-child(4){
+  width: 8vw;
+  height: 5vh;
+  margin-left: 0.5em;
+  border-radius: 1.3em;
+  outline: none;
+  font-size: 0.1.5in;
+}
+
+
+
+#container .add #day {
+  font-size: 1.4em;
+}
+#container #dash-b{
+text-align: center;
+margin-top: 2.7em;
+
+}
+.media #image{
+  background: chocolate;
+  
+}
+.product-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5em;
+  height: 200px;
+}
+.product-container img{
+  width: 200px;
+}
+.product-container :hover{
+opacity: 0.6;
+
+}
+.product-container a{
+  color: #000;
+}
+.product-container b{
+  animation: toggle 2s infinite;
+  color: red;
+}
+@keyframes toggle{
+  from{
+    color: blue;
+  }
+  to{
+    color: #ccc;
+  }
+}
+.display{
+  display: block;
+  border: 2px solid purple;
+  width: 20%;
+  text-align: center;
+ padding-top: 3em; 
+ 
+}
+.display a:hover{
+color: red;
+}
