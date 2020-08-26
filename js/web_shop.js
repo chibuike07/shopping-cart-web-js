@@ -82,9 +82,9 @@ function generatePassword() {
     .join("");
 
   let len = shuffle.slice(0, passwordLen.length);
-  let r = confirm(len);
+  let confirmAlert = confirm(len);
 
-  if (r == true) {
+  if (confirmAlert == true) {
     array.push(len);
   } else {
     console.log("false");

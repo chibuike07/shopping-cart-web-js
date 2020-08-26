@@ -115,11 +115,12 @@ function files() {
       let t = $("#recentImg").append(last);
     }
   }
+  return things;
 }
 files();
 
 let likes = document.querySelectorAll("#gallery .pic"); //pushing img into an array
-$("#gallery div img").after(" <img src = 'like4-img.png' width='60'/> ");
+$("#gallery div img").after(" <img src = '../img/like2-img.png' width='60'/> ");
 const liker = [...likes];
 liker.map((imgList) => {
   const appendCount = document.createElement("p");

@@ -1,0 +1,6 @@
+#gallery {
+  background-color: yellow;
+  width: 100%;
+  display: none;
+  justify-content: space-evenly;
+}

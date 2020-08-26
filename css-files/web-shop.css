@@ -113,13 +113,13 @@
 #container .add #day {
   font-size: 1.4em;
 }
+
 #container #dash-b {
   text-align: center;
   margin-top: 2.7em;
 }
 .media #image {
-  background: chocolate;
-  display: none;
+  background-color: yellow;
 }
 .product-container {
   display: flex;
@@ -140,10 +140,12 @@
   animation: toggle 2s infinite;
   color: red;
 }
+
 @keyframes toggle {
   from {
     color: blue;
   }
+
   to {
     color: #ccc;
   }
